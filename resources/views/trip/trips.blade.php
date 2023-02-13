@@ -14,7 +14,7 @@
                </span>
                <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
                   <li>
-                     <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
+                     <a href="{{ route('trip.trip') }}" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                         <img class="w-12 h-12 mb-3 mr-3 rounded-full sm:mb-0" src="assets/images/travel1.jpg" alt="Bonnie Green image"/>
                         <div>
                            <div class="text-base font-normal text-gray-600 dark:text-gray-400">
@@ -27,7 +27,7 @@
                      </a>
                   </li>
                   <li>
-                     <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
+                     <a href="{{ route('trip.trip') }}" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                         <img class="w-12 h-12 mb-3 mr-3 rounded-full sm:mb-0" src="assets/images/travel1.jpg" alt="Bonnie Green image"/>
                         <div>
                            <div class="text-base font-normal text-gray-600 dark:text-gray-400">
@@ -47,7 +47,7 @@
                </span>
                <ol class="mt-3 divide-y divider-gray-200 dark:divide-gray-700">
                   <li>
-                     <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
+                     <a href="{{ route('trip.trip') }}" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                         <img class="w-12 h-12 mb-3 mr-3 rounded-full sm:mb-0" src="assets/images/travel1.jpg" alt="Bonnie Green image"/>
                         <div>
                            <div class="text-base font-normal text-gray-600 dark:text-gray-400">
@@ -60,7 +60,7 @@
                      </a>
                   </li>
                   <li>
-                     <a href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
+                     <a href="{{ route('trip.trip') }}" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                         <img class="w-12 h-12 mb-3 mr-3 rounded-full sm:mb-0" src="assets/images/travel1.jpg" alt="Bonnie Green image"/>
                         <div>
                            <div class="text-base font-normal text-gray-600 dark:text-gray-400">
