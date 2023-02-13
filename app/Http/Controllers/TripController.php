@@ -24,4 +24,9 @@ class TripController extends Controller
         return view('trip.trip');
     }
 
+    public function edit(){
+
+        return view('trip.edit');
+    }
+
 }
