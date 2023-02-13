@@ -2,7 +2,7 @@
  
     
     <section  class="py-12 flex flex-col">
-        <h1 class="text-4xl font-bold pl-24">Welcome Back, {{ Auth::user()->name }}!</h1>
+        <h1 class="text-4xl font-bold pl-24">Welcome Back, {{ Auth::user()->firstname }}!</h1>
         <div class="grid-cols-3 gap-5 flex flex-wrap text-black py-16 mx-20">
           
         <div class="md:flex-1 md:order-2 container flex-col lg:flex-row px-5">
