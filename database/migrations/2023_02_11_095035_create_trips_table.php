@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->string('slug');
+            $table->string('slug')->nullable();
             $table->string('reason')->nullable();
             $table->date('depature_date')->nullable();
             $table->date('arrival_date')->nullable();

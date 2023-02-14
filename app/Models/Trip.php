@@ -10,4 +10,10 @@ class Trip extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+
+    public function destinations()
+    {
+        return $this->hasMany(Destination::class);
+    }
 }
