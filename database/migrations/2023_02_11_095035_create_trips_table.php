@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('depature_date')->nullable();
             $table->date('arrival_date')->nullable();
             $table->string('departure_place')->nullable();
+            $table->string('attachement')->nullable();
             $table->text('note')->nullable();
             $table->timestamps();
         });
