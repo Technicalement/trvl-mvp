@@ -1,6 +1,6 @@
 <x-app-layout>
     <section class="text-black py-16 bg-center bg-cover" 
-       style="background-image: url('assets/images/travel1.jpg')">
+       style="background-image: url('assets/images/Resized/trip.png')">
        <div class="container mx-auto px-4">
           <h1 class="text-4xl lg:text-3xl xl:text-3xl font-bold mb-6">YOUR TRIP</h1>
        </div>
@@ -14,7 +14,7 @@
                </span>
                <h3 class="flex items-center mb-1 font-bold text-2xl text-gray-900 dark:text-white">London, Bristol & Manchester London, Bristol & Manchester 
                 <span class="px-2.5 py-0.5 ml-6">
-                    <img class="h-16 mb-3  mr-3 rounded-full sm:mb-0" src="assets/images/travel1.jpg" alt="Bonnie Green image"/>
+                    <img class="w-[210px] mb-3  mr-3 sm:mb-0" src="assets/images/Icons/London.png" alt="Bonnie Green image"/>
                 </span>
                 
                </h3>

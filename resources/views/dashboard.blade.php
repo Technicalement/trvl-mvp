@@ -7,7 +7,7 @@
           
         <div class="md:flex-1 md:order-2 container flex-col lg:flex-row px-5">
             
-            <div class="flex flex-col py-28 bg-center bg-cover items-center justify-center h-[404px] w-[504px] bg-gray-100 rounded-lg" style="background-image: url('assets/images/travel1.jpg')">
+            <div class="flex flex-col py-28 bg-center bg-cover items-center justify-center h-[404px] w-[504px] bg-gray-100 rounded-lg" style="background-image: url('assets/images/Resized/montain-desert.png')">
               
                 <h2 class="text-lg font-medium mt-4">It's been</h2>
                 <div class="text-white text-6xl font-light mt-2">00 : 05 : 02 </div>
@@ -45,7 +45,7 @@
       <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-                <img src="assets/images/maps.jpg" width='100%' height='532' alt="Amaki-Agency" />
+                <img src="assets/images/maps.jpg" width='100%' height='532' alt="Maps" />
             </div>
         </div>
     </div>
