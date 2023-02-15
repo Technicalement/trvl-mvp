@@ -31,8 +31,6 @@ class TripController extends Controller
             'arrival_date' => 'required',
             'depature_date' => 'required',
             'reason' => 'required',
-            'arrival_city' => 'required',
-            'depature_date' => 'required',
             'passport_number' => 'required',
             'passport_expiration' => 'required',
             'visa_number' => 'required',
