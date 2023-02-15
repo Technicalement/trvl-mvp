@@ -23,7 +23,7 @@ class TripController extends Controller
     public function addTrip(Request $request)
     {
       $request->validate([
-            'trip_name' => 'required',
+            'name' => 'required',
             'departure_city' => 'required',
             'arrival_city' => 'required',
             'arrival_date' => 'required',
@@ -40,13 +40,13 @@ class TripController extends Controller
             $files[] = $name;
             $result = Trip::create([
                 "file" => $name,
-                "trip_name" => $request->trip_name,
+                "name" => $request->name,
                 "departure_city" => $request->departure_city,
                 "arrival_city" => $request->arrival_city,
                 "arrival_date" => $request->arrival_date,
                 "depature_date" => $request->depature_date,
                 "reason" => $request->reason,
-                "notes" => $request->notes,
+                "note" => $request->note,
                 "user_id" => auth()->user()->id,
 
         ]);
