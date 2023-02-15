@@ -49,6 +49,11 @@
                         <option value="London">London</option>
                         <option value="Bangkok">Bangkok</option>
                         <option value="Sidney">Sidney</option>
+                        <option value="Paris">Paris</option>
+                        <option value="Abidjan">Abidjan</option>
+                        <option value="Lagos">Lagos</option>
+                        <option value="Munich">Munich</option>
+                        <option value="Other">Other</option>
                      </select>
                      
                      <label class="text-sm font-medium">Departure (optional):</label>
