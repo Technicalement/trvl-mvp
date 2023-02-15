@@ -46,14 +46,14 @@
                      <label class="text-sm font-medium">Arrival:</label>
                      <select name="reason" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400 " required="required" name="reason" id="reason">
                         <option value="None" disabled selected>City, Country ?</option>
-                        <option value="London">London</option>
-                        <option value="Bangkok">Bangkok</option>
-                        <option value="Sidney">Sidney</option>
-                        <option value="Paris">Paris</option>
-                        <option value="Abidjan">Abidjan</option>
-                        <option value="Lagos">Lagos</option>
-                        <option value="Munich">Munich</option>
-                        <option value="Other">Other</option>
+                        <option value="1">London</option>
+                        <option value="2">Bangkok</option>
+                        <option value="3">Sidney</option>
+                        <option value="4">Paris</option>
+                        <option value="5">Abidjan</option>
+                        <option value="6">Lagos</option>
+                        <option value="7">Munich</option>
+                        <option value="8">Other</option>
                      </select>
                      
                      <label class="text-sm font-medium">Departure (optional):</label>
