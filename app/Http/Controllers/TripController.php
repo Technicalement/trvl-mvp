@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Trip;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Document;
+use App\Models\Destination;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TripController extends Controller
 {
@@ -52,6 +54,32 @@ class TripController extends Controller
         ]);
         }
      }
+
+     $ze = "Test";
+     $city = '2';
+     $destination = Destination::create([
+        'name' => $ze,
+        'trip_id' => $result->id,
+        'city_id' => $city,
+    ]);
+
+    // Passport Info
+     $type1 = "Passport";
+    $passport = Document::create([
+        'name' => $ze,
+        'trip_id' => $result->id,
+        'user_id' => auth()->user()->id,
+        'document_type' => $type1,
+    ]);
+
+        // Visa Info
+        $type2 = "Visa";
+    $visa = Document::create([
+        'name' => $ze,
+        'trip_id' => $result->id,
+        'user_id' => auth()->user()->id,
+        'document_type' => $type2,
+    ]);
 
      if($result) {
         return back()->with('success', 'Success! file uploaded');
