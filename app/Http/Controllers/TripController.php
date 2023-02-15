@@ -40,7 +40,7 @@ class TripController extends Controller
         $name = time().rand(1,100).'.'.$file->extension();
         if ($file->move(public_path('uploads'), $name)) {
             $files[] = $name;
-            $result = Trip::create([
+            $trip = Trip::create([
                 "file" => $name,
                 "name" => $request->name,
                 "departure_city" => $request->departure_city,
@@ -55,33 +55,35 @@ class TripController extends Controller
         }
      }
 
-     $ze = "Test";
+     $latest_trip = Trip::query()->where('user_id', auth()->user()->id)->latest('created_at')->first();
+     
+     $ze = "Test"; 
      $city = '2';
      $destination = Destination::create([
         'name' => $ze,
-        'trip_id' => $result->id,
+        'trip_id' => $latest_trip->id,
         'city_id' => $city,
     ]);
 
-    // Passport Info
-     $type1 = "Passport";
-    $passport = Document::create([
+     // Passport Info
+        $type1 = "Passport";
+        $passport = Document::create([
         'name' => $ze,
-        'trip_id' => $result->id,
+        'trip_id' => $latest_trip,
         'user_id' => auth()->user()->id,
         'document_type' => $type1,
     ]);
 
         // Visa Info
         $type2 = "Visa";
-    $visa = Document::create([
+        $visa = Document::create([
         'name' => $ze,
-        'trip_id' => $result->id,
+        'trip_id' => $latest_trip,
         'user_id' => auth()->user()->id,
         'document_type' => $type2,
     ]);
 
-     if($result) {
+     if($trip) {
         return back()->with('success', 'Success! file uploaded');
      }
 
