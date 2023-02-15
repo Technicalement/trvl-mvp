@@ -15,6 +15,11 @@ class TripController extends Controller
         $this->middleware('auth');
     }
 
+
+    public function index(){
+
+        return view('trip.trips');
+    }
     
     public function create(){
 
@@ -87,14 +92,6 @@ class TripController extends Controller
          return back()->with('failed', 'Alert! failed to add new trip');
      }
     }
-
-
-
-    public function trips(){
-
-        return view('trip.trips');
-    }
-
 
     public function trip(){
 

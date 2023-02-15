@@ -29,7 +29,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/create-trip', [TripController::class, 'create'])->name('trip.create');
     Route::post('/create-trip', [TripController::class, 'addTrip'])->name('trip.add');
     Route::get('/edit-trip', [TripController::class, 'edit'])->name('trip.edit');
-    Route::get('/trips', [TripController::class, 'trips'])->name('trip.trips');
+    Route::get('/trips', [TripController::class, 'index'])->name('trip.trips');
     Route::get('/trip', [TripController::class, 'trip'])->name('trip.trip');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
