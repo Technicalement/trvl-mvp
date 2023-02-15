@@ -57,11 +57,10 @@ class TripController extends Controller
      $latest_trip = Trip::query()->where('user_id', auth()->user()->id)->latest('created_at')->first();
      
      $ze = "Test"; 
-     $city = '2';
      $destination = Destination::create([
         'name' => $ze,
         'trip_id' => $latest_trip->id,
-        'city_id' => $city,
+        'city_id' => $latest_trip->departure_city,
     ]);
 
      // Passport Info

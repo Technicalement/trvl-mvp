@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('departure_city')->nullable();
             $table->string('file')->nullable();
             $table->text('note')->nullable();
+            $table->unsignedBigInteger('city_id');
             $table->timestamps();
         });
     }
