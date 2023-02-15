@@ -44,7 +44,7 @@
                   <div class="absolute w-5 h-5 bg-[#8EB8A1] rounded-full -left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                   <div class="px-5 pb-5">
                      <label class="text-sm font-medium">Arrival:</label>
-                     <select name="reason" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400 " required="required" name="reason" id="reason">
+                     <select name="arrival_city" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400 " required="required" name="reason" id="reason">
                         <option value="None" disabled selected>City, Country ?</option>
                         <option value="1">London</option>
                         <option value="2">Bangkok</option>
