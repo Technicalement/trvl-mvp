@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('place_of_issue')->nullable();
             $table->string('date_of_issue')->nullable();
             $table->string('start_date')->nullable(); 
+            $table->string('end_date')->nullable(); 
             $table->string('date_of_expiration')->nullable();
             $table->string('soft_copy')->nullable();
             $table->timestamps();

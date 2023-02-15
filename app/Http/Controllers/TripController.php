@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Trip;
 use App\Models\Document;
-use App\Models\Destination;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -54,39 +53,39 @@ class TripController extends Controller
         }
      }
 
-     $latest_trip = Trip::query()->where('user_id', auth()->user()->id)->latest('created_at')->first();
+       $latest_trip = Trip::query()->where('user_id', auth()->user()->id)->latest('created_at')->first();
      
-     $ze = "Test"; 
-     $destination = Destination::create([
-        'name' => $ze,
-        'trip_id' => $latest_trip->id,
-        'city_id' => $latest_trip->departure_city,
-    ]);
 
      // Passport Info
         $type1 = "Passport";
         $passport = Document::create([
-        'name' => $ze,
-        'trip_id' => $latest_trip,
+        'name' => $latest_trip->name,
+        'trip_id' => $latest_trip->id,
         'user_id' => auth()->user()->id,
+        'document_number'=> $request->passport_number,
+        'date_of_expiration' => $request->passport_expiration,
         'document_type' => $type1,
     ]);
 
         // Visa Info
         $type2 = "Visa";
         $visa = Document::create([
-        'name' => $ze,
-        'trip_id' => $latest_trip,
+        'name' => $latest_trip->name,
+        'document_number'=> $request->visa_number,
+        'start_date'=> $request->visa_start_date,
+        'end_date' => $request->visa_end_date,
+        'date_of_expiration' => $request->passport_expiration,
+        'trip_id' => $latest_trip->id,
         'user_id' => auth()->user()->id,
         'document_type' => $type2,
     ]);
 
      if($trip) {
-        return back()->with('success', 'Success! file uploaded');
+        return back()->with('success', 'Success! New trip has been added');
      }
 
      else {
-         return back()->with('failed', 'Alert! file not uploaded');
+         return back()->with('failed', 'Alert! failed to add new trip');
      }
     }
 
