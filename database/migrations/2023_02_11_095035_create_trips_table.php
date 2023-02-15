@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('reason')->nullable();
             $table->date('depature_date')->nullable();
             $table->date('arrival_date')->nullable();
-            $table->string('arrival_city')->nullable();
             $table->string('departure_city')->nullable();
             $table->string('file')->nullable();
             $table->text('note')->nullable();
