@@ -48,7 +48,7 @@
                      <label class="text-sm font-medium">Departure (optional):</label>
                      <input name="departure_city" placeholder="Add where you’re leaving from if it’s different from the arrival destination" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400"> 
                      <div class="flex">
-                        <div class="flex-grow w-1/4 pr-2">
+                        <div class="flex-grow pr-2">
                            <label class="text-sm font-medium">Arrival Date:</label>
                            <input name="arrival_date" type="date"  placeholder="Arrival Date" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
                         </div>
@@ -78,8 +78,8 @@
                <li class="mb-10 ml-4">
                   <div class="absolute w-5 h-5 bg-[#8EB8A1] rounded-full -left-2.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
                   <div class="px-5 pb-5">
-                     <label name="visa_number" class="text-sm font-medium">Visa Number (optional):</label>
-                     <input type="text" placeholder="Enter your visa number" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
+                     <label class="text-sm font-medium">Visa Number (optional):</label>
+                     <input name="visa_number" type="text" placeholder="Enter your visa number" class=" text-black placeholder-gray-600 w-full px-4 py-2.5 mt-2 text-base   transition duration-500 ease-in-out transform border-transparent rounded-lg bg-gray-200  focus:border-blueGray-500 focus:bg-white dark:focus:bg-gray-800 focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 ring-gray-400">
                      <div class="flex">
                         <div class="flex-grow pr-2">
                            <label class="text-sm font-medium">Visa Start Date (optional):</label>
