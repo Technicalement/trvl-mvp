@@ -26,16 +26,10 @@ class TripController extends Controller
     {
       $request->validate([
             'name' => 'required',
-            'departure_city' => 'required',
             'arrival_city' => 'required',
             'arrival_date' => 'required',
             'depature_date' => 'required',
             'reason' => 'required',
-            'passport_number' => 'required',
-            'passport_expiration' => 'required',
-            'visa_number' => 'required',
-            'visa_start_date' => 'required',
-            'visa_end_date' => 'required',
             'note' => 'required',
             'file' => 'required|mimes:pdf,xlxs,xlx,docx,doc,csv,txt,png,gif,jpg,jpeg|max:2048',
     ]);
