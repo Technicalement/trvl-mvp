@@ -1,11 +1,12 @@
 <x-app-layout>
    <section class="text-black py-16 bg-center bg-cover" 
-      style="background-image: url('assets/images/travel1.jpg')">
+      style="background-image: url({{asset('assets/images/Resized/create-trip.png')}})">
       <div class="container mx-auto px-4">
          <h1 class="text-4xl lg:text-3xl xl:text-3xl font-bold mb-6">EDIT TRIP</h1>
       </div>
    </section>
-   
+
+
    @if (count($errors) > 0)
    <div class="alert alert-danger">
        <strong>Sorry!</strong> There were more problems with your HTML input.<br><br>
@@ -48,10 +49,6 @@
                         <option value="1">London</option>
                         <option value="2">Bangkok</option>
                         <option value="3">Sidney</option>
-                        <option value="4">Paris</option>
-                        <option value="5">Abidjan</option>
-                        <option value="6">Lagos</option>
-                        <option value="7">Munich</option>
                         <option value="8">Other</option>
                      </select>
                      
