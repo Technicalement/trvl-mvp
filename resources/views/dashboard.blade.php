@@ -12,19 +12,21 @@
          <div class="px-5 md:flex-1 md:order-2 container flex-col lg:flex-row">
             <h1 class="text-3xl font-bold pb-6">Where you’ve been</h1>
             <ul class="list-none">
+               @foreach ($trips as $trip)
                <li>
                   <a href="{{ url('trip/'. $trip->id) }}" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                      <img class="h-[80px] w-[45px] mb-3 mr-8 sm:mb-0" src="assets/images/Icons/Year2022.png" alt="London Icon"/>
                      <div>
                         <div class="text-base font-normal text-gray-600 dark:text-gray-400">
-                           <h3 class="text-lg font-normal text-gray-900 dark:text-white">London, Bristol & Manchester</h3>
+                           <h3 class="text-lg font-normal text-gray-900 dark:text-white">{{ $trip->name }}</h3>
                         </div>
                         <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
-                           <h3 class="text-lg font-normal text-gray-900 dark:text-white">Nov 18 - Dec 5</h3>
+                           <h3 class="text-lg font-normal text-gray-900 dark:text-white">{{ \Carbon\Carbon::parse($trip->departure_date)->format('j F') }} - {{ \Carbon\Carbon::parse($trip->arrival_date)->format('j F') }}</h3>
                         </span>
                      </div>
                   </a>
                </li>
+               @endforeach
             </ul>
             <a href="" type="button" class="mb-2 w-[250px] px-6 py-5 bg-[#AFCDD8] text-white text-center font-medium text-xs leading-normal uppercase rounded-lg shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out">View Trips</a>
          </div>
