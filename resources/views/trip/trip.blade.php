@@ -9,7 +9,8 @@
       <div  class="items-start justify-center lg:w-[40%] py-12 px-6 lg:px-2 flex flex-col space-y-6">
          <div class="relative dark:border-gray-700">
             <div class="mb-8 ml-4">
-               <span class="absolute flex items-center justify-center w-5 h-5 bg-[#446567] rounded-full -left-2.5 ring-8 ring-white">
+               <span class="absolute flex items-center justify-center w-5 h-5 -left-2.5 ring-8 ring-white">
+                  <i class="fa fa-print" aria-hidden="true"></i>
                </span>
                <h3 class="flex items-center mb-1 font-bold text-2xl text-gray-900 dark:text-white">{{ $trip->name }}
                   <span class="px-2.5 py-0.5 ml-6">
@@ -36,10 +37,18 @@
                   <div href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                      <div>
                         <div class="text-base font-normal text-gray-600 dark:text-gray-400">
-                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Arrival: {{ $trip->arrival_city }}</p>
+                           <p class="text-base font-normal text-gray-500 dark:text-gray-400"><i class="fa fa-long-arrow-right"></i> Arrival:            @if($trip->city_id == 1)
+                              London , United Kingdom
+                              @elseif($trip->city_id == 2)
+                              Bangkok, Thailand
+                              @elseif($trip->city_id == 3)
+                              Sydney , Australia
+                              @else
+                              This Location is not available in our database
+                              @endif</p>
                         </div>
                         <div class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
-                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Departure: {{ $trip->departure_city }} </p>
+                           <p class="text-base font-normal text-gray-500 dark:text-gray-400"><i class="fa fa-long-arrow-left"></i> Departure: {{ $trip->departure_city }} </p>
                         </div>
                      </div>
                   </div>
@@ -52,13 +61,13 @@
                   <div href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                      <div>
                         <div class="text-base font-normal text-gray-600 dark:text-gray-400">
-                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Visa Number:
+                           <p class="text-base font-normal text-gray-500 dark:text-gray-400"><i class="fa fa-file-text"></i> Visa Number:
                          {{ $doc->document_number }}
                               
                            </p>
                         </div>
                         <div class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
-                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Visa Expiration Date: {{ \Carbon\Carbon::parse($doc->date_of_expiration)->format('j F, Y') }}</p>
+                           <p class="text-base font-normal text-gray-500 dark:text-gray-400"><i class="fa fa-calendar"></i> Visa Expiration Date: {{ \Carbon\Carbon::parse($doc->date_of_expiration)->format('j F, Y') }}</p>
                         </div>
                      </div>
                   </div>
@@ -85,7 +94,7 @@
                      <div>
                         <div class="text-base font-normal text-gray-600 dark:text-gray-400">
                            <p class="text-base font-normal text-gray-500 dark:text-gray-400">
-                              {{ $trip->file}}
+                              <i class="fa fa-file-image"></i>  {{ $trip->file}}
                            </p>
                         </div>
                      </div>
