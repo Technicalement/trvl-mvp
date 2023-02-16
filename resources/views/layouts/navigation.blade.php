@@ -6,10 +6,10 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        
-                  <h1 class="text-4xl font-bold text-black">TRVL</h1>
-            
-                    </a>
+                
+                   <img class="w-50 h-10 mb-3 mr-3 sm:mb-0" src="{{asset('assets/images/Logo/Original/trvl_logo_black.png')}}" alt="logo"/>
+                   
+                </a>
                 </div>
 
                 <!-- Navigation Links -->
