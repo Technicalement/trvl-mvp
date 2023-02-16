@@ -101,7 +101,7 @@ class TripController extends Controller
 
         $trip = Trip::findOrFail($id);
 
-        $doc = Document::find($id)->where('document_type', 'Visa')->first();
+        $doc = Document::where('document_type', 'Visa')->where('trip_id', $id)->first();
     
         return view('trip.trip')->with(compact('trip', 'doc'));
      }

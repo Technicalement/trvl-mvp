@@ -17,7 +17,7 @@
                 @if($trip->city_id == 1)
                   <img class="w-[140px] mr-3 sm:mb-0" src="{{asset('assets/images/Icons/London.png')}}" alt="London Icon"/>
                   @elseif($trip->city_id == 2)
-                  <img class="w-[140px]  mr-3 sm:mb-0" src="{{asset('assets/images/Icons/Bangkok.png')}}" alt="Bangkok Icon"/>
+                  <img class="w-[60px]  mr-3 sm:mb-0" src="{{asset('assets/images/Icons/Bangkok.png')}}" alt="Bangkok Icon"/>
                   @elseif($trip->city_id == 3)
                   <img class="w-[140px]  mr-3 sm:mb-0" src="{{asset('assets/images/Icons/Sydney.png')}}" alt="Sydney Icon"/>
                   @else
@@ -62,7 +62,8 @@
                      <div>
                         <div class="text-base font-normal text-gray-600 dark:text-gray-400">
                            <p class="text-base font-normal text-gray-500 dark:text-gray-400"><i class="fa fa-file-text"></i> Visa Number:
-                         {{ $doc->document_number }}
+                        
+                              {{ $doc->document_number }}
                               
                            </p>
                         </div>

@@ -16,7 +16,7 @@ class DashboardController extends Controller
 
     public function index(){
 
-        $trips = Trip::whereUserId(Auth::id())->get();
+        $trips = Trip::whereUserId(Auth::id())->latest()->take(3)->get();
 
         return view('dashboard', compact('trips'));
     }
