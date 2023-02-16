@@ -13,34 +13,8 @@
             <h1 class="text-3xl font-bold pb-6">Where you’ve been</h1>
             <ul class="list-none">
                <li>
-                  <a href="{{ route('trip.trip') }}" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
+                  <a href="{{ url('trip/'. $trip->id) }}" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                      <img class="h-[80px] w-[45px] mb-3 mr-8 sm:mb-0" src="assets/images/Icons/Year2022.png" alt="London Icon"/>
-                     <div>
-                        <div class="text-base font-normal text-gray-600 dark:text-gray-400">
-                           <h3 class="text-lg font-normal text-gray-900 dark:text-white">London, Bristol & Manchester</h3>
-                        </div>
-                        <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
-                           <h3 class="text-lg font-normal text-gray-900 dark:text-white">Nov 18 - Dec 5</h3>
-                        </span>
-                     </div>
-                  </a>
-               </li>
-               <li>
-                  <a href="{{ route('trip.trip') }}" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
-                     <img class="h-[80px] w-[45px] mb-3 mr-8 sm:mb-0" src="assets/images/Icons/Year2021.png" alt="London Icon"/>
-                     <div>
-                        <div class="text-base font-normal text-gray-600 dark:text-gray-400">
-                           <h3 class="text-lg font-normal text-gray-900 dark:text-white">London, Bristol & Manchester</h3>
-                        </div>
-                        <span class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
-                           <h3 class="text-lg font-normal text-gray-900 dark:text-white">Nov 18 - Dec 5</h3>
-                        </span>
-                     </div>
-                  </a>
-               </li>
-               <li>
-                  <a href="{{ route('trip.trip') }}" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
-                     <img class="h-[80px] w-[45px] mb-3 mr-8 sm:mb-0" src="assets/images/Icons/Year2021.png" alt="London Icon"/>
                      <div>
                         <div class="text-base font-normal text-gray-600 dark:text-gray-400">
                            <h3 class="text-lg font-normal text-gray-900 dark:text-white">London, Bristol & Manchester</h3>
