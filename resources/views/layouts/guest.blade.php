@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <footer class="w-full h-[200px] bg-slate-900 text-gray-300 py-y"  style="background-image: url({{asset('assets/images/Resized/trip.png')}})">
+        <footer class="w-full h-[200px] bg-slate-900 text-gray-300 py-y"  style="background-image: url({{asset('assets/images/Resized/login.png')}})">
     
           </footer>
     </body>

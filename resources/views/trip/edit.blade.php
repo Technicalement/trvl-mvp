@@ -52,6 +52,7 @@
    <div class="m-auto items-center justify-center flex-col-1 lg:flex">
       <form method="POST" enctype="multipart/form-data"  action="{{ route('trip.add') }}">
          @csrf
+
          <div class="mt-5 items-start justify-center lg:w-[70%] py-12 px-6 lg:px-2 flex flex-col space-y-6">
             <ol class="relative border-l border-gray-200 dark:border-gray-700">
                <li class="mb-10 ml-4">
