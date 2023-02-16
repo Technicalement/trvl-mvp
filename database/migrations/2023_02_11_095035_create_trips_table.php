@@ -17,12 +17,14 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->string('name');
-            $table->string('slug');
+            $table->string('slug')->nullable();
             $table->string('reason')->nullable();
-            $table->date('depature_date')->nullable();
+            $table->date('departure_date')->nullable();
             $table->date('arrival_date')->nullable();
-            $table->string('departure_place')->nullable();
+            $table->string('departure_city')->nullable();
+            $table->string('file')->nullable();
             $table->text('note')->nullable();
+            $table->unsignedBigInteger('city_id');
             $table->timestamps();
         });
     }

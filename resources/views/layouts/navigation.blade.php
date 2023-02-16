@@ -6,10 +6,10 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        
-                  <h1 class="text-4xl font-bold text-black">TRVL</h1>
-            
-                    </a>
+                
+                   <img class="w-50 h-8 mb-3 mr-3 sm:mb-0" src="{{asset('assets/images/Logo/Original/trvl_logo_black.png')}}" alt="logo"/>
+                   
+                </a>
                 </div>
 
                 <!-- Navigation Links -->
@@ -31,7 +31,9 @@
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
-                            <div>{{ Auth::user()->firstname }}</div>
+                            <div>
+                              <span><i class="fa fa-xl fa-user-circle"></i> </span>
+                            </div>
 
                             <div class="ml-1">
                                 <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
@@ -42,7 +44,7 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
+                        <x-dropdown-link>
                             {{ __('Profile') }}
                         </x-dropdown-link>
 
