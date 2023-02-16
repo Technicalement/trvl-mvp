@@ -100,7 +100,7 @@ class TripController extends Controller
 
         $trip = Trip::findOrFail($id);;
     
-        return view('trip.trip','dashboard')->with(compact('trip'));
+        return view('trip.trip')->with(compact('trip'));
      }
     
 
