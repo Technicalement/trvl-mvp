@@ -17,7 +17,7 @@
                   </span>
                </h3>
                <p class="text-lg font-semibold text-gray-900 dark:text-white">{{ \Carbon\Carbon::parse($trip->departure_date)->format('j F') }} - {{ \Carbon\Carbon::parse($trip->arrival_date)->format('j F') }}</p>
-               <p href="#" class="inline-flex items-center px-4 py-2 mt-6 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Vacation</p>
+               <p href="#" class="inline-flex items-center px-4 py-2 mt-6 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-200 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">{{ $trip->reason }}</p>
             </div>
          </div>
          <ol class="relative border-l border-gray-200 dark:border-gray-700">
@@ -28,10 +28,10 @@
                   <div href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                      <div>
                         <div class="text-base font-normal text-gray-600 dark:text-gray-400">
-                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Arrival: London, United Kingdom</p>
+                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Arrival: {{ $trip->arrival_city }}</p>
                         </div>
                         <div class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
-                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Departure: Manchester, United Kingdom</p>
+                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Departure: {{ $trip->departure_city }} </p>
                         </div>
                      </div>
                   </div>
@@ -60,7 +60,7 @@
                   <div href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                      <div>
                         <div class="text-base font-normal text-gray-600 dark:text-gray-400">
-                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Visited Bristol for a day. Forgot my umbrella and it rained all day. Would love to go back when it’s not pouring.</p>
+                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">{{ $trip->note}}</p>
                         </div>
                      </div>
                   </div>
@@ -73,8 +73,8 @@
                   <div href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                      <div>
                         <div class="text-base font-normal text-gray-600 dark:text-gray-400">
-                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">image3.jpg
-                              itinerary_london.pdf
+                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">
+                              {{ $trip->file}}
                            </p>
                         </div>
                      </div>
