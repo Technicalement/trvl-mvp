@@ -6,6 +6,7 @@ use App\Models\Trip;
 use App\Models\Document;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class TripController extends Controller
 {
@@ -98,9 +99,11 @@ class TripController extends Controller
 
     public function getTrip($id){
 
-        $trip = Trip::findOrFail($id);;
+        $trip = Trip::findOrFail($id);
+
+        $doc = Document::find($id)->where('document_type', 'Visa')->first();
     
-        return view('trip.trip')->with(compact('trip'));
+        return view('trip.trip')->with(compact('trip', 'doc'));
      }
     
 

@@ -44,10 +44,13 @@
                   <div href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                      <div>
                         <div class="text-base font-normal text-gray-600 dark:text-gray-400">
-                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Visa Number: A329074230</p>
+                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Visa Number:
+                         {{ $doc->document_number }}
+                              
+                           </p>
                         </div>
                         <div class="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400">
-                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Visa Expiration Date: Dec 30, 2022</p>
+                           <p class="text-base font-normal text-gray-500 dark:text-gray-400">Visa Expiration Date: {{ \Carbon\Carbon::parse($doc->date_of_expiration)->format('j F, Y') }}</p>
                         </div>
                      </div>
                   </div>
