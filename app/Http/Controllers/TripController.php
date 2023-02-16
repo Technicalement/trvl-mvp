@@ -107,9 +107,15 @@ class TripController extends Controller
      }
     
 
-    public function edit(){
+    public function edit($id){
 
-        return view('trip.edit');
+        $trip = Trip::findOrFail($id);
+
+        $visa = Document::where('document_type', 'Visa')->where('trip_id', $id)->first();
+
+        $passport = Document::where('document_type', 'Passport')->where('trip_id', $id)->first();
+
+        return view('trip.edit', compact('trip', 'visa', 'passport'));
     }
 
 }
