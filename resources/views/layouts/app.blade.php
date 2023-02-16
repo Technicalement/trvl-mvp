@@ -35,12 +35,77 @@
             </main>
         </div>
 
-        <footer class="w-full bg-slate-900 text-gray-300 py-y">
-            <div class="flex flex-col max-w-[1240px] px-2 py-4 mx-auto justify-between sm:flex-row text-center text-gray-500">
-              <p class="py-4">Copyright &copy; Made in 2023, by a team based in 
-                3 different countries </p>
+        <footer class="bg-gray-700 pt-8 pb-6 text-white">
+  
+            <div class="container mx-auto px-4">
+              <div class="flex flex-wrap">
+                <div class="w-full lg:w-6/12 px-4">
+                 
+                  <P class="text-lg mt-0 mb-2">
+                    Copyright © Made in 2023, by a team based in 
+                    3 different countries 
+                  </P>
+               
+                </div>
+                <div class="w-full lg:w-6/12 px-4">
+                  <div class="flex flex-wrap items-top mb-6">
+                    <div class="w-full lg:w-4/12 px-4 ml-auto">
+                      <span
+                        class="block uppercase text-sm font-semibold mb-2"
+                        >Useful Links</span
+                      >
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            class="hover:text-gray-900 font-semibold block pb-2 text-sm"
+                            href="#"
+                            >Our Story</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="hover:text-gray-900 font-semibold block pb-2 text-sm"
+                            href="#"
+                            >Contact Us</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="hover:text-gray-900 font-semibold block pb-2 text-sm"
+                            href="#"
+                            >FAQs</a
+                          >
+                        </li>
+                       
+                      </ul>
+                    </div>
+                    <div class="w-full lg:w-4/12 px-4">
+                      <span
+                        class="block uppercase text-sm font-semibold mb-2"
+                        >Social media</span
+                      >
+                      <ul class="list-unstyled">
+                        <li>
+                          <a
+                            class="hover:text-gray-900 font-semibold block pb-2 text-sm"
+                            href="#"
+                            >Instagram</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="hover:text-gray-900 font-semibold block pb-2 text-sm"
+                            href="#"
+                            >Facebook</a
+                          >
+                        </li>
+                    
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-    
           </footer>
     </body>
 </html>
