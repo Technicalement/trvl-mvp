@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug')->nullable();
             $table->string('reason')->nullable();
-            $table->date('depature_date')->nullable();
+            $table->date('departure_date')->nullable();
             $table->date('arrival_date')->nullable();
             $table->string('departure_city')->nullable();
             $table->string('file')->nullable();

@@ -6,7 +6,7 @@ use App\Models\Trip;
 use App\Models\Document;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
+
 
 class TripController extends Controller
 {
@@ -52,7 +52,7 @@ class TripController extends Controller
                 "departure_city" => $request->departure_city,
                 "city_id" => $request->arrival_city,
                 "arrival_date" => $request->arrival_date,
-                "depature_date" => $request->depature_date,
+                "departure_date" => $request->depature_date,
                 "reason" => $request->reason,
                 "note" => $request->note,
                 "user_id" => auth()->user()->id,
@@ -117,5 +117,60 @@ class TripController extends Controller
 
         return view('trip.edit', compact('trip', 'visa', 'passport'));
     }
+
+    public function update(Request $request, $id)
+    {
+
+        $request->validate([
+            'name' => 'required',
+            'arrival_city' => 'required',
+            'arrival_date' => 'required',
+            'reason' => 'required',
+            'note' => 'required',
+            'file' => 'required|mimes:pdf,xlxs,xlx,docx,doc,csv,txt,png,gif,jpg,jpeg|max:2048',
+    ]);
+
+    if ($request->hasfile('file')) {
+        $file = $request->file('file');
+        $name = time().rand(1,100).'.'.$file->extension();
+        if ($file->move(public_path('uploads'), $name)) {
+            $files[] = $name;
+         
+
+       $trip = Trip::findOrFail($id);
+       $trip->name = $request->get('name');
+       $trip->file = $name;
+       $trip->departure_city = $request->get('departure_city');
+       $trip->city_id = $request->get('city_id');
+       $trip->arrival_date = $request->get('arrival_date');
+       $trip->departure_date = $request->get('departure_date');
+       $trip->reason = $request->get('reason');
+       $trip->note = $request->get('note');
+       $trip->update();
+        }
+     }
+
+     // Passport
+       $passport = Document::where('document_type', 'Visa')->where('trip_id', $id)->first();
+       $passport->document_number = $request->get('passport_number');
+       $passport->date_of_expiration = $request->get('passport_expiration');
+       $passport->update();
+
+        // Visa Info
+        $visa = Document::where('document_type', 'Passport')->where('trip_id', $id)->first();
+        $visa->document_number = $request->get('passport_number');
+        $visa->start_date = $request->get('visa_start_date');
+        $visa->end_date = $request->get('visa_end_date');
+        $visa->update();
+
+     if($trip) {
+        return back()->with('success', 'Success! Your trip has been updated');
+     }
+
+     else {
+         return back()->with('failed', 'Alert! failed to  update trip');
+     }
+    }
+
 
 }

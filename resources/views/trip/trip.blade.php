@@ -37,7 +37,7 @@
                   <div href="#" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
                      <div>
                         <div class="text-base font-normal text-gray-600 dark:text-gray-400">
-                           <p class="text-base font-normal text-gray-500 dark:text-gray-400"><i class="fa fa-long-arrow-right"></i> Arrival:            @if($trip->city_id == 1)
+                           <p class="text-base font-normal text-gray-500 dark:text-gray-400"><i class="fa fa-long-arrow-right"></i> Arrival: @if($trip->city_id == 1)
                               London , United Kingdom
                               @elseif($trip->city_id == 2)
                               Bangkok, Thailand
