@@ -13,7 +13,15 @@
                </span>
                <h3 class="flex items-center mb-1 font-bold text-2xl text-gray-900 dark:text-white">{{ $trip->name }}
                   <span class="px-2.5 py-0.5 ml-6">
-                  <img class="w-[210px] mb-3  mr-3 sm:mb-0" src="{{asset('assets/images/Icons/London.png')}}" alt="london"/>
+                @if($trip->city_id == 1)
+                  <img class="w-[140px] mr-3 sm:mb-0" src="{{asset('assets/images/Icons/London.png')}}" alt="London Icon"/>
+                  @elseif($trip->city_id == 2)
+                  <img class="w-[140px]  mr-3 sm:mb-0" src="{{asset('assets/images/Icons/Bangkok.png')}}" alt="Bangkok Icon"/>
+                  @elseif($trip->city_id == 3)
+                  <img class="w-[140px]  mr-3 sm:mb-0" src="{{asset('assets/images/Icons/Sydney.png')}}" alt="Sydney Icon"/>
+                  @else
+                  <img class="w-[140px]  mr-3 sm:mb-0" src="{{asset('assets/images/Icons/Airplane.png')}}" alt="Other Icon"/>
+                  @endif
                   </span>
                </h3>
                <p class="text-lg font-semibold text-gray-900 dark:text-white">{{ \Carbon\Carbon::parse($trip->departure_date)->format('j F') }} - {{ \Carbon\Carbon::parse($trip->arrival_date)->format('j F') }}</p>

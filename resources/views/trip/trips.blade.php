@@ -18,11 +18,14 @@
                   @foreach ($trips as $trip)
                   <li>
                      <a href="{{ url('trip/'. $trip->id) }}" class="items-center block p-3 sm:flex hover:bg-gray-100 dark:hover:bg-gray-700">
-                        @if($trip->city_id == 8)
+                        @if($trip->city_id == 1)
                         <img class="w-[90px] h-12 mb-3 mr-3 sm:mb-0" src="assets/images/Icons/London.png" alt="London Icon"/>
-                        @elseif($trip->city_id == 1)
-                        aaa
+                        @elseif($trip->city_id == 2)
+                        <img class="w-[90px] h-12 mb-3 mr-3 sm:mb-0" src="assets/images/Icons/Bangkok.png" alt="Bangkok Icon"/>
+                        @elseif($trip->city_id == 3)
+                        <img class="w-[90px] h-12 mb-3 mr-3 sm:mb-0" src="assets/images/Icons/Sydney.png" alt="Sydney Icon"/>
                         @else
+                        <img class="w-[90px] h-12 mb-3 mr-3 sm:mb-0" src="assets/images/Icons/Airplane.png" alt="Other Icon"/>
                         @endif
                         <div>
                            <div class="text-base font-normal text-gray-600 dark:text-gray-400">
