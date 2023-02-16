@@ -3,7 +3,7 @@
       <h1 class="text-4xl font-bold pl-24">Welcome Back, {{ Auth::user()->firstname }}!</h1>
       <div class="grid-cols-3 gap-5 flex flex-wrap text-black py-16 mx-20">
          <div class="md:flex-1 md:order-2 container flex-col lg:flex-row px-5">
-            <div class="flex flex-col py-28 bg-center bg-cover items-center justify-center h-[404px] w-[504px] bg-gray-100 rounded-lg" style="background-image: url('assets/images/Resized/montain-desert.png')">
+            <div class="flex flex-col py-28 bg-center bg-cover items-center justify-center h-[404px] w-[504px] bg-gray-100 rounded-lg" style="background-image: url({{asset('assets/images/Resized/montain-desert.png')}})">
                <h2 class="text-lg font-medium mt-4">It's been</h2>
                <div class="text-white text-6xl font-light mt-2">00 : 05 : 02 </div>
                <h2 class="text-lg font-medium mt-4">since you travelled. </h2>
