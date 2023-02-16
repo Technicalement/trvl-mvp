@@ -12,8 +12,8 @@ class Trip extends Model
     protected $guarded = [];
 
 
-    public function destinations()
+    public function user()
     {
-        return $this->hasMany(Destination::class);
+        return $this->belongsTo(User::class);
     }
 }

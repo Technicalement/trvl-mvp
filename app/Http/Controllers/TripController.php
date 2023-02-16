@@ -18,8 +18,11 @@ class TripController extends Controller
 
     public function index(){
 
-        return view('trip.trips');
+        $trips = Trip::whereUserId(Auth::id())->get();
+
+        return view('trip.trips', compact('trips'));
     }
+
     
     public function create(){
 
@@ -93,10 +96,13 @@ class TripController extends Controller
      }
     }
 
-    public function trip(){
+    public function getTrip($id){
 
-        return view('trip.trip');
-    }
+        $trip = Trip::findOrFail($id);;
+    
+        return view('trip.trip')->with(compact('trip'));
+     }
+    
 
     public function edit(){
 
